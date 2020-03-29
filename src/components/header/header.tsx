@@ -9,14 +9,14 @@ const Header = () => {
   return (
     <header className={'header-container' + (expanded ? ' expanded' : '')}>
       <div className="left-menu-container">
-        <Link to="/" className="me-link">Your Name</Link>
+        <Link to="/" className="me-link">Jacob Neterer</Link>
         <button className={'nav-menu-button' + (expanded ? ' expanded' : '')} onClick={() => setExpanded(!expanded)}>
           <IconMenu />
         </button>
       </div>
-      <div>
-        <Link className="nav-button" to="/#hero-container" onClick={() => setExpanded(false)} >About</Link>
-        <Link className="nav-button" to="/#projects-section-container" onClick={() => setExpanded(false)} >Projects</Link>
+      <div className="right-menu-container">
+        <Link className="nav-button" to="/#about" onClick={() => setExpanded(false)} >About</Link>
+        <Link className="nav-button" to="/#projects" onClick={() => setExpanded(false)} >Projects</Link>
       </div>
     </header>
   );
